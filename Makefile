@@ -1,4 +1,4 @@
-TARGET = TCC_FGA.pdf
+TARGET = TCC.pdf
 
 BIBTEX = bibtex
 LATEX = latex
@@ -34,9 +34,9 @@ SOURCES = $(FIXOS_FILES) $(EDITAVEIS_FILES)
 
 .PHONY: all clean dist-clean
 
-all: 
+all:
 	@make $(TARGET)
-     
+
 $(TARGET): $(MAIN_FILE) $(SOURCES) bibliografia.bib
 	$(LATEX) $(MAIN_FILE) $(SOURCES)
 	$(BIBTEX) $(AUX_FILE)
@@ -50,9 +50,10 @@ clean:
 	rm -f *~ *.dvi *.ps *.backup *.aux *.log
 	rm -f *.lof *.lot *.bbl *.blg *.brf *.toc *.idx
 	rm -f *.pdf
-	
+
 dist: clean
 	tar vczf tcc-fga-latex-$(VERSION).tar.gz *
 
 dist-clean: clean
 	rm -f $(PDF_FILE) $(TARGET)
+
