@@ -32,9 +32,12 @@ PDF_FILE  = $(addsuffix .pdf, $(basename $(MAIN_FILE)))
 
 SOURCES = $(FIXOS_FILES) $(EDITAVEIS_FILES)
 
+# Phony targets are used when target should not be file
+# If we have a file, the commands will run the same way
 .PHONY: all clean dist-clean
 
 all:
+	# @ not display the command on terminal
 	@make $(TARGET)
 
 $(TARGET): $(MAIN_FILE) $(SOURCES) bibliografia.bib
