@@ -2,12 +2,13 @@
 
 Este capítulo evidencia o que será desenvolvido, ou seja, a proposta inicial do software PGTBL.
 
-Recapitulando, o objetivo do projeto é a automatização do metodologia ativa de aprendizagem baseada em equipe ou TBL, essa metodologia é uma estratégia de ensino colaborativa que se concentra em um ciclo de três passos:
+Recapitulando, o objetivo do projeto é a automatização do metodologia ativa de aprendizagem baseada em equipe ou TBL, essa metodologia é uma estratégia de ensino colaborativa que se concentra em um ciclo de quatro passos:
 
 \begin{enumerate}
   \item \textbf{Preparação}: Basicamente o professor irá disponibilizar de artigos e livros para estudo que será a preparação para as avaliações.
   \item \textbf{Avaliação em classe}: A primeira avaliação é individual e a segunda em grupo para testar o conhecimento adquirido na preparação e o trabalho em equipe respectivamente.
   \item \textbf{Pequeno projeto centrado na aplicação}: Aplicar todo o conhecimento adquirido em um contexto real no tópico proposto.
+  \item \textbf{Avaliação em pares}: Avaliar o desempenho de cada membro da equipe.
 \end{enumerate}
 
 \section{Finalidade}
@@ -16,55 +17,13 @@ A finalidade do software é que a aplicação do TBL se torne algo mais fácil, 
 
 \section{Descrição dos usuários}
 
-\subsection{Usuário professor}
+Temos no total três tipos de usuários:
 
-\begin{itemize}
-  \item \textbf{Descrição}: Pessoas que busca melhorar o ensino e a forma de avaliação das escolas e universidades.
-  \item \textbf{Responsabilidade}: Gerenciamento das disciplinas e alunos usando o sistema. O professor também é responsável por criar e gerenciar listas e avaliações.
-  \item \textbf{Critérios de sucesso}: Permite que os alunos possam aprender de uma maneira mais ativa e colaborativa
-  \item \textbf{Envolvimento}: Alto
-\end{itemize}
+O usuário professor é aquele que busca melhorar o ensino e a forma de avaliação das escolas, ele tem como responsabilidade gerenciar as disciplinas e alunos usando o sistema. O professor também é responsável por criar e gerenciar as listas de exercício e avaliações.
 
-\subsection{Usuário monitor}
+O usuário monitor são alunos ou professores que buscam ajudar na aplicação do TBL dentro da plataforma. Tem como responsabilidade criar e gerenciar questões da lista de exercícios, arquivos da disciplina e das sessões de TBL e tirar dúvidas.
 
-\begin{itemize}
-  \item \textbf{Descrição}: Alunos ou professores que buscam ajudar na aplicação do TBL dentro da plataforma.
-  \item \textbf{Responsabilidade}: Gerenciar questões da lista de exercícios, arquivos da disciplina e das sessões de TBL, tirar dúvidas, entre outras.
-  \item \textbf{Critérios de sucesso}: Permite que os alunos possam aprender de uma maneira mais ativa e colaborativa.
-  \item \textbf{Envolvimento}: Médio
-\end{itemize}
-
-\subsection{Usuário aluno}
-
-\begin{itemize}
-  \item \textbf{Descrição}: Pessoas que queiram aprender e se preparar para o mercado de trabalho de forma colaborativa e não competitiva
-  \item \textbf{Responsabilidade}: Fazer todas as atividades relacionadas ao TBL.
-  \item \textbf{Critérios de sucesso}: Aprender as disciplinas e se sentir preparado para atuar no mercado
-  \item \textbf{Envolvimento}: Alto
-\end{itemize}
-
-
-\section{Principais necessidades dos usuários}
-
-\subsection{Gerenciar aulas}
-
-\begin{itemize}
-  \item \textbf{Necessidade}: Gerenciar aulas
-  \item \textbf{Prioridade}: Alta
-  \item \textbf{Preocupações}: Conseguir gerenciar as aulas através do software PGTBL
-  \item \textbf{Solução proposta}: Software que ajude na aplicação da metodologia.
-  \item \textbf{Solução atual}: Ensino com pouca participação do aluno e avaliações ineficientes do conhecimento.
-\end{itemize}
-
-\subsection{Aprender}
-
-\begin{itemize}
-  \item \textbf{Necessidade}: Aprender
-  \item \textbf{Prioridade}: Alta
-  \item \textbf{Preocupações}: Os alunos devem sair das universidades preparados para o mercado de trabalho
-  \item \textbf{Solução proposta}: Software que faça o aluno ser mais ativo nas aulas e aprenda a trabalhar em equipe.
-  \item \textbf{Solução atual}: Alunos pouco motivados a se preparar para o mercado de trabalho.
-\end{itemize}
+Já o usuário aluno são aqueles que querem aprender e se preparar para o mercado de trabalho de forma colaborativa e não competitiva. Tem como responsabilidade realizar todas as atividades relacionadas ao TBL.
 
 \section{Visão geral do produto}
 
@@ -118,19 +77,18 @@ A proposta do serviço ofertado, envolve a utilização de certos recursos que n
 \section{Requisitos de qualidade (Não funcionais ou Enables)}
 
 \begin{itemize}
-  \item \textbf{Sistema}: O sistema deve seguir a arquitetura MVC definida no documento de Arquitetura e as ferramentas
-    de desenvolvimento será o Python (versão 3.5) e o framework Django (versão 2.0) tendo atualização constante.
+  \item \textbf{Sistema}: O sistema deve seguir a arquitetura MVT definida no documento de arquitetura e as ferramentas de desenvolvimento será o Python (versão 3.5) e o framework Django (versão 2.0) tendo atualização constante.
   \item \textbf{Suportabilidade}: O sistema poderá ser acessado em computadores pessoais - notebook, desktop – utilizando-se de um serviço de internet. Sendo uma aplicação Web compatível com os principais sistemas operacionais (Linux, Mac, Windows), acessada através do navegador Google Chrome e/ou Firefox de um dispositivo móvel ou fixo.
   \item \textbf{Qualidade}: O sistema deve seguir uma folha de estilo a ponto de o código ser legível e de fácil manutenção, tendo como base boas práticas de programação, o sistema deve ter baixo acoplamento e alta coesão além de ser modularizado focando na flexibilidade e manutenção do mesmo.
-  \item \textbf{Usabilidade}: O sistema deve ser responsivo, adaptando-se à plataforma que o usuário estiver utilizando e o design deve ser fácil de usar e aprender e seguir as heurísticas de usabilidade.
+  \item \textbf{Usabilidade}: O sistema deve ser responsivo, adaptando-se à plataforma que o usuário estiver utilizando e o design deve ser fácil de usar e aprender.
   \item \textbf{Desempenho}: Por ser um sistema web o software necessita de uma conexão estável com a internet para seu funcionamento. A velocidade da internet tem impacto direto no desempenho da aplicação, sendo necessário uma velocidade suficiente para processar as informações e executar as funcionalidades do sistema.
-  \item \textbf{Segurança}: O sistema deve apresentar uma boa percentagem de cobertura de testes, mínimo de 70\% e bastante encapsulamento de código, além de um sistema de log eficiente e ter confiabilidade.
+  \item \textbf{Segurança}: O sistema deve apresentar uma boa percentagem de cobertura de testes automatizados, mínimo de 70\% e bastante encapsulamento de código, além de um sistema de log eficiente e ter confiabilidade.
   \item \textbf{Confiabilidade}: O sistema deve se comprometer em apresentar informações confiáveis para o usuário do sistema, entretanto dependerá diretamente dos demais usuários, uma vez que o conteúdo apresentado será de autoria destes e deve apresentar um sistema de autenticação, autorização e recuperação seguro e eficiente.
 \end{itemize}
 
 \section{Alternativas e Concorrências}
 
-Não foi encontrada nenhum site que automatiza as tarefas do \textit{Team Based Learning}, apenas artigos, livros e sites ensinando como aplicar o TBL dentro das universidades e escolas usando apenas papel e caneta.
+Não foi encontrada nenhum site que automatiza as tarefas do Team Based Learning, apenas artigos, livros e sites ensinando como aplicar o TBL dentro das universidades e escolas usando apenas papel e caneta e algumas ferramentas de CMCs.
 
 \begin{itemize}
   \item \href{https://aprender.unb.br/}{Moodle}: Mesmo que siga a mesma ideia do software proposto o moodle normalmente serve só para disponibilizar informações e arquivos relevantes para os alunos.
@@ -146,16 +104,16 @@ Abaixo será listado todas as ferramentas e tecnologias utilizadas para a realiz
   \item \textbf{Google Drive}: Armazenamento e edição colaborativa dos artefatos e documentos do projeto.
   \item \textbf{Git e Github}: Controle de versão do código para um bom gerenciamento do mesmo.
   \item \textbf{Zenhub}: Permitir o gerenciamento constante das tarefas que serão realizadas durante o projeto.
-  \item \textbf{Linux}: Ambiente de desenvolvimento, homologação, produção e teste.
+  \item \textbf{Linux ubuntu}: Ambiente de desenvolvimento, homologação, produção e teste.
   \item \textbf{Whatsapp e Email}: Permite a comunicação entre os membros da equipe e os stakeholders, além da
     comunicação presencial.
   \item \textbf{Travis CI}: Ferramenta responsável por realizar a integração contínua das funcionalidades realizadas
   \item \textbf{Codacy}: Ferramenta para cobertura de testes e análise estática de código, usado para coletar métricas e
     melhorar a qualidade do código.
   \item \textbf{Docker}: Ferramentas responsáveis por criar um ambientes de desenvolvimento, teste, homologação e produção
-  \item \textbf{DockerHub}: Ferramenta para armazenar as imagens de cada ambiente.
-  \item \textbf{Python}: Linguagem de programação para a criação do software na versão 3.5.
-  \item \textbf{Django}: Framework utilizado para a criação do software na versão 2.0.
+  \item \textbf{DockerHub}: Repositório para armazenar as imagens de cada ambiente.
+  \item \textbf{Python 3.5}: Linguagem de programação para a criação do software.
+  \item \textbf{Django 2.0}: Framework utilizado para a criação do software.
   \item \textbf{Makefile}: Usado para facilitar a execução de scripts.
   \item \textbf{mkdocs}: Usado para criar a documentação do software.
 \end{itemize}
@@ -202,7 +160,7 @@ ler essa seção obterá uma visão geral de como esse software está estruturad
 
 \subsection{Representação Arquitetural}
 
-O projeto será implementado utilizando o framework Django na versão 2.0. O django utiliza-se do MVT (Model-View-Template) como uma adaptação do MVC (Model-View-Controller), o que muda é que a view do MVC virou template do MVT e a controller do MVC virou view do MVT, nas views utilizaremos as \textit{Classe Based Views}. Esse framework fará comunicação com o banco de dados Postgresql e o servidor nginx.
+O projeto será implementado utilizando o framework Django na versão 2.0. O django utiliza-se do MVT (Model-View-Template) como uma adaptação do MVC (Model-View-Controller), nas views utilizaremos as \textit{Class Based Views} para padronização do código. Esse framework fará comunicação com o banco de dados Postgresql e o servidor nginx.
 
 \begin{figure}[H]
 	\centering

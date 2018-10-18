@@ -1,6 +1,6 @@
 \subsection{Subprocesso de DevOps}
 
-Relembrando que DevOps é a combinação de filosofias, práticas e ferramentas que aumentam a capacidade de distribuir aplicativos e serviços em alta velocidade. Essas velocidade permite que seus clientes sejam atendidos de forma melhor e as empresas conseguem competir de forma mais eficaz no mercado.
+Relembrando que DevOps é a combinação de filosofias, práticas e ferramentas que aumentam a capacidade de distribuir aplicativos e serviços em alta velocidade. Essas velocidade permite que seus clientes sejam atendidos de forma melhor e as empresas conseguem competir de forma mais eficaz no mercado \cite{amazon}. No nosso processo de desenvolvimento chamamos esse subprocesso de operação e será realizado quase todo de forma automatizada de acordo com a figura \ref{fig:devops}
 
 \begin{figure}[H]
 	\centering
@@ -9,85 +9,10 @@ Relembrando que DevOps é a combinação de filosofias, práticas e ferramentas 
 	\label{fig:devops}
 \end{figure}
 
-\begin{itemize}
-  \item \textbf{Criação da branch para fazer a funcionalidade}:
-  \begin{itemize}
-    \item \textbf{Descrição}: O desenvolvedor irá criar uma nova branch a partir da devel para criar a nova funcionalidade
-      proposta de acordo com a política de branch estabelecida.
-    \item \textbf{Entradas}: N/A
-    \item \textbf{Saídas}: Nova branch da funcionalidade.
-  \end{itemize}
-  \item \textbf{Construção do código}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Com a nova branch criada o desenvolvedor irá criar o código para a nova funcionalidade.
-    \item \textbf{Entradas}: Branch
-    \item \textbf{Saídas}: Nova funcionalidade.
-  \end{itemize}
-  \item \textbf{Envio do código para o github}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Assim que o código estiver pronto, o desenvolvedor irá enviar o código para o repositorio do
-    github.
-    \item \textbf{Entradas}: Nova funcionalidade
-    \item \textbf{Saídas}: N/A
-  \end{itemize}
-  \item \textbf{Pull Request da branch atual para a branch devel}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Assim que o código for enviado para o github o desenvolvedor irá abrir um Pull Request para
-    que comece o processo de Integração Contínua e Deploy Continúo.
-    \item \textbf{Entradas}: Nova funcionalidade
-    \item \textbf{Saídas}: N/A
-  \end{itemize}
-  \item \textbf{Execução do Travis CI}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Processo automatizado para execução da Integração Contínua e Deploy Contínuo.
-    \item \textbf{Entradas}: Nova funcionalidade
-    \item \textbf{Saídas}: N/A
-  \end{itemize}
-  \item \textbf{Testes e Qualidade de Código}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Na integração Contínua de forma automatizada será executado os testes unitários, integração
-    e aceitação, além de verificar a qualidade do código por meio da ferramenta de análise estática.
-    \item \textbf{Entradas}: Nova funcionalidade
-    \item \textbf{Saídas}: Relatório com a cobertura de teste e qualidade de código.
-  \end{itemize}
-  \item \textbf{Aprovação e Merge do Pull Request}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Assim que a integração contínua for finalizada será feito o merge do código para a branch
-    devel ou master e começará o deploy contínuo do software.
-    \item \textbf{Entradas}: Nova funcionalidade
-    \item \textbf{Saídas}: Versão publicavel do software.
-  \end{itemize}
-  \item \textbf{Publicação das imagens no Dockerhub}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Por meio de Scripts automatizados o deploy continuo irá mandar a imagem do docker de
-    homologação ou produção gerada para o respositório de imagens chamado Dockerhub.
-    \item \textbf{Entradas}: Imagem do software.
-    \item \textbf{Saídas}: Versão publicavel da imagem do software de homologação ou produção.
-  \end{itemize}
-  \item \textbf{Conexão na máquina de deploy}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Por meio de SSH o script irá entrar na máquina de homologação ou produção
-    \item \textbf{Entradas}: Scrips de conexão.
-    \item \textbf{Saídas}: Conexão na máquina de homologação ou produção.
-  \end{itemize}
-  \item \textbf{Atualização dos ambientes com a última versão dos containers}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Assim que tiver dentro da máquina o script irá atualizar o respositório com as novas
-    modificações e irá subir o software por meio das imagens armazenadas no dockerhub.
-    \item \textbf{Entradas}: Scrips de conexão e Imagens do Dockerhub.
-    \item \textbf{Saídas}: Software em produção ou Homologação.
-  \end{itemize}
-  \item \textbf{Disponibilidade da nova versão para o usuãrio}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Assim que subir a imagem a nova versão do software estará pronta para uso.
-    \item \textbf{Entradas}: Scrips de conexão e Imagens do Dockerhub.
-    \item \textbf{Saídas}: Software em produção ou Homologação.
-  \end{itemize}
-  \item \textbf{Pull Request da branch devel para a branch master}:
-  \begin{itemize}
-    \item \textbf{Descrição}: Se o processo acima foi dentro da branch devel, ou seja, ambiente de homologação, o
-    desenvolvedor terá que mandar um Pull Request para a branch master para subir o ambiente de produção.
-    \item \textbf{Entradas}: Novas Funcionalidade.
-    \item \textbf{Saídas}: Software em produção.
-  \end{itemize}
-\end{itemize}
+Esse subprocesso está ligado ao desenvolvimento da ferramenta e aos testes, ela começa com o desenvolvedor criando uma branch (ramificação) a partir da branch devel para criar a nova funcionalidade proposta de acordo com a política de branch estabelecida. Essa política estipula duas ramificações principais: a branch master que tem o código que irá para o ambiente de produção e a branch devel que irá para o ambiente de homologação. Esses ambientes são máquinas disponibilizadas remotamente para a instalação do software. A partir da devel será criado novas ramificações para novas funcionalidades.
+
+Com a branch criada será desenvolvido o código da nova funcionalidade e assim que finalizado será enviado para repositório do github por meio da ferramenta de controle de versão de código git. No github o desenvolvedor irá abrir um Pull Request para que comece a roda o processo de integração contínua e deploy contínuo do software por meio da ferramenta Travis CI.
+
+Na integração contínua será executado de forma automática os testes, além de verificar a qualidade do código por meio da ferramenta de análise estática Codacy. Com isso o desenvolvedor realizará o merge do código para a branch devel e desta para a branch master, em paralelo será realizado o deploy do software no ambiente de homologação e produção de acordo com a branch especificada.
+
+O processo de deploy contínuo funciona da seguinte maneira: por meio de scripts o travis CI irá mandar a imagem de homologação ou produção para o repositório de imagens Dockerhub. Com isso o script irá entrar na máquina de homologação e atualizar o repositório com as novas modificações e disponibilizando a nova versão do software para uso em seu respectivo ambiente.
