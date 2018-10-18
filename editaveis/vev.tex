@@ -1,0 +1,104 @@
+\section{Verificação e Validação}
+
+Essa subseção fala um pouco do processo de verificação e validação e está dividido em: Técnicas estáticas de verificação e validação, técnicas dinâmicas de verificação e validação e testes automatizados.
+
+De acordo com \cite{pressman} a engenharia de software é um corpo de conhecimento que aplica os princípios de engenharia com o objetivo de produzir software de alta qualidade e baixo custo. Porém no processo de desenvolvimento erros no produto ainda podem ocorrer.
+
+Várias atividades sobre a perspectiva da garantia da qualidade têm sido introduzida ao longo do processo de desenvolvimento, entre elas temos as atividades de verificação e validação, com o objetivo de minimizar a ocorrência desses erros \cite{jino}.
+
+Propósito do processo de verificação é confirmar que cada serviço e/ou produto de trabalho do processo ou do projeto atende apropriadamente os requisitos especificados \cite{pressman1}.
+
+O processo de verificação é detalhado pelo guia, segundo o \cite{mpsbr}, em 6 tarefas gerais:
+
+\begin{itemize}
+  \item \textbf{VER 1}: Identificar os produtos de trabalho a serem verificados.
+  \item \textbf{VER 2}: Desenvolver e implementar uma estratégia de verificação, com definição de um cronograma,
+    revisores envolvidos, métodos para verificação e qualquer material a ser utilizado na verificação.
+  \item \textbf{VER 3}: Identificar critérios e procedimentos para verificação dos produtos de trabalho,
+    além da definição do ambiente de verificação.
+  \item \textbf{VER 4}: Executar revisão por pares e testes e atividades de verificação.
+  \item \textbf{VER 5}: Identificar e registrar defeitos.
+  \item \textbf{VER 6}: Analisar os resultados gerados e encaminhar aos envolvidos.
+\end{itemize}
+
+O objetivo da validação é validar que um produto de software atenderá a seu objetivo quando colocado no ambiente para o qual foi desenvolvido \cite{sommerville}.
+
+De forma geral o processo de validação tem seu foco em como avaliar a qualidade de um produto ou componente de produto, assegurando que os objetivos e ou necessidades dos clientes sejam atendidas quando colocado em seu ambiente de produção, ou seja, o objetivo da validação é garantir que o produto correto está sendo desenvolvido \cite{mpsbr}.
+
+O processo de validação é detalhado pelo guia, segundo o \cite{mpsbr}, em 7 tarefas gerais, como resultados esperados:
+
+\begin{itemize}
+  \item \textbf{VAL 1}: Identificar os produtos de trabalho a serem validados.
+  \item \textbf{VAL 2}: Desenvolver e implementar uma estratégia de validação, com definição de um cronograma,
+    revisores envolvidos, métodos para validação e qualquer material a ser utilizado na validação.
+  \item \textbf{VAL 3}: Identificar critérios e procedimentos para validação dos produtos de trabalho, além da
+    definição do ambiente de validação.
+  \item \textbf{VAL 4}: Executar atividades de validação para garantir que o produto esteja pronto para ser
+    disponibilizado em ambiente de uso.
+  \item \textbf{VAL 5}: Identificar e registrar problemas.
+  \item \textbf{VAL 6}: Analisar os resultados obtidos e encaminhar aos envolvidos.
+  \item \textbf{VAL 7}: Obter evidências de que os produtos de software desenvolvidos estão prontos para o uso
+    pretendido são fornecidas.
+\end{itemize}
+
+A atividade de verificação e validação apresenta dois tipos de técnicas que podem ser aplicadas no processo de desenvolvimento de software. São elas: técnicas estáticas e técnicas dinâmicas de verificação e validação de software \cite{myers}.
+
+\subsection{Técnicas estáticas}
+
+De acordo com \cite{myers} Como técnicas estáticas de verificação e validação temos:
+
+\begin{itemize}
+  \item \textbf{Inspeção}: A inspeção é um processo de revisão formal de software e corresponde a uma das mais importantes atividades de Garantia de Qualidade de Software, o seu principal objetivo é a descoberta antecipada de falhas e é dividido em 6 partes: planejamento, apresentação, preparação, reunião de inspeção, retrabalho e acompanhamento.
+  \item \textbf{Walkthrough}: Nesta técnica a revisão é feito por meio da execução passo a passo de um procedimento ou programa, porém realizado no papel. O principal objetivo é encontrar erros e envolve equipes pequenas de três a cinco pessoas, na qual é feito uma simulação da execução por cada revisor por meio de um conjunto de casos de testes disponibilizado pelo testador.
+  \item \textbf{Peer-Review}: É uma técnica realizada em pares de programadores com mesmo nível de conhecimento. O objetivo desta técnica é obter pontos de vista diferentes dos desenvolvedores a fim de encontrar problemas de qualidade. Deve ser analisado o produto e não o desenvolvedor.
+\end{itemize}
+
+\subsection{Técnicas dinâmicas}
+
+A atividade de testes dentro das técnicas dinâmicas de verificação e validação são as mais utilizadas, essas fornecem evidências da confiabilidade do software em complemento a outras atividades, como o uso técnicas estáticas de verificação e validação \cite{jino}.
+
+Ela consiste na análise dinâmica do produto e tem como objetivo encontrar falhas nesse produto, para um possível processo de depuração e, por consequência, o aumento da confiança de que ele esteja correto \cite{rocha}.
+
+Sobre casos de testes temos alguns conceitos definidos, como: níveis de testes, tipos de testes e técnicas de testes.
+
+\subsubsection{Níveis de teste}
+
+O teste de produto de software concretiza-se em 3 fases de testes: De unidade, integração e sistema \cite{myers}.
+
+Os testes de unidade cada unidade do programa é testada, isolada das demais unidades. Esse teste, verifica se a unidade funciona de forma adequada aos tipos de entrada esperados. Normalmente na orientação a objeto são as classes ou modelos.  Ele a testa de maneira isolada geralmente simulando as prováveis dependências que aquela unidade tem.
+
+Quando todas as unidades já tiverem sido testadas, a próxima fase é realizar o teste de integração, para assegurar que as interfaces entre as unidades foram definidas e tratadas adequadamente. É aquele que testa a integração entre duas partes do seu sistema. Os testes das controladora, por exemplo, onde seu teste vai até o banco de dados, é um teste de integração. Afinal, você está testando a integração do seu sistema com o sistema externo, que é o banco de dados. Testes que garantem que suas classes comunicam-se bem com serviços web, escrevem arquivos texto, ou mesmo mandam mensagens via socket são considerados testes de integração.
+
+Funcionamento do sistema como um todo, com todas as unidades trabalhando juntas. De acordo com o MPS.BR o teste do sistema envolve: teste funcional que verifica se o sistema integrado realiza as funções especificadas nos requisitos; teste de desempenho que avalia como o sistema se comporta em relação aos requisitos não-funcionais especificados, tais como tempo de resposta, uso do processador, segurança, dentre outros; teste de aceitação que verificar a iteração de um usuário com o software, documentação do usuário e treinamento; e teste de instalação que são testes de scripts de instalação para verificar se o software é instalado sem nenhum problema no host dos clientes.
+
+\subsubsection{Tipos de testes}
+
+De acordo com \cite{myers} temos dois tipos de testes: teste funcional, ou seja, teste baseado em requisitos funcionais e teste não funcional, teste baseado em requisitos não funcionais, por exemplo, qualidade de código.
+
+\subsubsection{Técnicas de testes}
+
+Técnica é o processo que vai assegurar perfeito funcionamento de alguns aspectos de software ou de sua unidade. De
+acordo com \cite{myers} existem quatro tipos de técnicas principais, são elas:
+
+\begin{itemize}
+  \item \textbf{Caixa Preta}: Aborda o software sem se preocupar com a forma como ele foi implementado, ou seja, aborda o software de um ponto de vista macroscópico. Esse teste é baseado na analise funcional do software ele garante que os requisitos funcionem conforme o especificado, é inseridos alguns dados e espera-se na saída o resultado de como foi projetado os requisitos. Essa técnica pode ser aplicada em todos os níves de teste citados.
+  \item \textbf{Caixa Branca}: Essa técnica é o oposto da caixa preta, já que estabelece os requisitos de teste com base na implementação do código. Esse teste tem por objetivo testar o código fonte cobrindo as funcionalidades do componente de software, ele testa cada linha de código possível, testar os fluxos básicos e os alternativos.
+  \item \textbf{Particionamento de Equivalência}: É uma técnica caixa preta que agrupa e otimiza casos de testes, afim de fazer a maior cobertura possível do sistema. Ela propõe a separação das possíveis entradas em categorias diferentes. O objetivo dessa técnica é eliminar os casos de testes redundante, por exemplo, valores entre 1990 e 2000, podemos pegar um único representante para todos esses casos, 1993 por exemplo e pegamos representantes para dados invalidos, como dados negativos ou fora do intervalor proposto, por exemplo, -10, 1980, 2001, entre outros. Os casos de teste devem ser construídos a partir das partições criadas.
+  \item \textbf{Análise de Valor Limite}: Também é uma técnica caixa preta que visa identificar o comportamento nos limites de uma partição de equivalência, ou seja, seus máximus e mínimus, que é onde existe maior probabilidade de estar incorreto. Análise do valor limite pode ser aplicada em todos os níveis de teste. Os limites são áreas onde testes estão mais propensos a indicar defeitos. Por exemplo, os valores limites de 1900 a 2004 são 1899, 1900, 2004, 2005. Ela complementa o particionamento de equivalência.
+\end{itemize}
+
+\subsubsection{Testes automatizados}
+
+Para \cite{kon} no mundo ideal, os sistemas devem não só fazer corretamente o que o cliente precisa, mas fazê-lo de forma segura, eficiente e escalável, além de ser de fácil manutenção, evolução e flexíveis.
+
+Hoje em dia essa característica são asseguradas através de testes manuais. Ou seja, após os três passos convencionais para o desenvolvimento de uma funcionalidade que são: estudar o problema, buscar a solução e implementá-la. O desenvolvedor faz testes manuais para verificar se está tudo funcionando como o esperado. Os desenvolvedores precisam encontrar o erro, corrigi-lo e refazer o conjunto de testes manuais. Esses testes podem ser executados por desenvolvedores, usuários ou mesmo por equipes especializadas em testes \cite{kon}.
+
+De acordo com \cite{kon} a dificuldade da realização de testes manuais leva à aparição de diversos problemas, tais como atraso nas entregas, produtos com grande quantidade de erros, dificuldade de manutenção e evolução. A execução de um caso de teste é rápida e efetiva, porém a repetição de um vasto conjunto de testes manualmente é uma tarefa cansativa e desgastante e isso leva ao cenário mais conhecido como “bola de neve”, levando a erros de regressão, ou seja, erros em módulos do sistema que estavam funcionando corretamente e deixaram de funcionar. A tendência é este ciclo se repetir até que a manutenção do sistema se torne uma tarefa tão custosa que passa a valer a pena refazê-lo do zero.
+
+E aí que entra metodologias como o XP que recomendam que todos controlem a qualidade do produto todos os dias e a todo momento. Pois acreditam que prevenir defeitos é mais fácil e barato que identificá-los e corrigi-los. E essa em particular recomenda testes automatizados para ajudar a garantir a qualidade do mesmo \cite{kon}.
+
+Testes automatizados são scripts que exercitam funcionalidades do sistema sendo testado e fazem verificações automáticas nos efeitos colaterais obtidos, ou seja, ao realizar o teste de regressão irá identificar se há alguma funcionalidade já implementada que parou de funcionar. Todos os casos de testes podem ser facilmente repetidos a qualquer momento e com pouco esforço e é possível criar situações de testes bem elaboradas e complexas do que as realizadas manualmente, por exemplo, simular centenas ou milhares de usuários acessando um sistema ao mesmo tempo \cite{kon}.
+
+\subsection{Fechamento da seção}
+
+Todas as características acima citadas ajudam a diminuir a quantidade de erros e aumentar a qualidade do software. Com isso mudanças no sistema podem ser feitos com segurança, o que aumenta a vida útil do produto e o torna mais atraente para o mercado.

@@ -18,7 +18,7 @@ EDITAVEIS_DIR = editaveis
 EDITAVEIS_SOURCES = informacoes.tex dedicatoria.tex \
 					resumo.tex abstract.tex abreviaturas.tex simbolos.tex \
 					introducao.tex referencial_teorico.tex tbl.tex \
-					gerenciamento.tex qualidade.tex devops.tex \
+					gerenciamento.tex vev.tex gqm.tex devops.tex gnu.tex \
 					metodologia.tex	metodologia_desenvolvimento.tex \
 					metodologia_requisitos.tex metodologia_devops.tex \
 					metodologia_gqm.tex proposta.tex conclusao.tex \

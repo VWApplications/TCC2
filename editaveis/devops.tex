@@ -1,32 +1,33 @@
 \section{DevOps}
 
-De acordo com \cite{amazon} o DevOps é a combinação de filosofias, práticas e ferramentas que aumentam a capacidade de
-distribuir aplicativos e serviços em alta velocidade. Essas velocidade permite que seus clientes sejam atendidos de
-forma melhor e as empresas conseguem competir de forma mais eficaz no mercado. Com esse novo modelo, as equipes de
-desenvolvimento e operações não são mais separadas, ou seja, os engenheiros trabalham durante todo o ciclo de vida do
-aplicativo, da fase de desenvolvimento e testes à fase de implantação e operações.
+De acordo com \cite{zalla} quando uma empresa precisa entregar uma nova versão do software ao usuário, é necessário por parte da equipe de desenvolvimento e de operações uma comunicação mais efetiva para que essa demanda não atrase o andamento do projeto. Por exemplo, surge com frequência a necessidade de instalação e configuração de requisitos do sistema operacional para que os programas e serviços funcionem corretamente. Isso se transforma em uma tarefa de configuração complexa e custosa, principalmente se a empresa possui alto número de servidores, computadores e elevados padrões de governança. Para resolver esse problema surge o conceito de DevOps \cite{zalla}.
+
+De acordo com \cite{amazon} o DevOps é a combinação de filosofias, práticas e ferramentas que aumentam a capacidade de distribuir aplicativos e serviços em alta velocidade. Essas velocidade permite que seus clientes sejam atendidos de forma melhor e as empresas conseguem competir de forma mais eficaz no mercado.
+
+DevOps é complementar ao desenvolvimento ágil, inserindo-se no processo de integração contínua e entrega contínua utilizando ferramentas como Docker ou Vagrant, assegurando que o código está pronto para produção além de permitir um melhor fluxo de trabalho entre as duas equipes \cite{medrado}.
+
+Com esse novo modelo, as equipes de desenvolvimento e operações não são mais separadas, ou seja, os engenheiros trabalham durante todo o ciclo de vida do aplicativo, da fase de desenvolvimento e testes à fase de implantação e operações.
 
 \begin{figure}[H]
 	\centering
-  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/devops_pipe.eps}
+  \includegraphics[keepaspectratio=true,scale=0.4]{figuras/devops_pipe.eps}
   \caption[O que é DevOps.]{O que é DevOps. Fonte: \cite{amazon}}
-	\label{fig:desenvolvimento}
+	\label{fig:devops2}
 \end{figure}
 
-Essas equipes usam práticas para automatizar processos que sempre foram feitas de maneira manual e lenta. Eles usam
-várias técnologias que o auxiliam a automatizar todo esse processo que envolve a infraestrutura do software e isso
-aumenta ainda mais a velocidade e produtividade da equipe \cite{amazon}.
+\subsection{Benefícios do DevOps}
 
-A \cite{amazon} cita alguns benefícios do DevOps, são eles: velocidade, entrega rápida, confiabilidade, operações em
-escala, colaboração melhorada e segurança. Além disso o modelo de DevOps é importante já que o software já não apenas
-sustenta uma atividade empresarial, ele tornou-se um componente integral de cada parte de uma empresa. O objetivo
-principal desse modelo é remover as barreiras entre duas equipes tradicionalmente separadas, desenvolvimento e
-operações, com essa abordagem as duas equipes trabalham juntas para otimizar a produtividade dos desenvolvedores e a
-confiabilidade das operações de forma a automatizar alguns processos que antes eram feitos de forma manual e que gerava
-uma certa dependencia entre as equipes.
+De acordo com \cite{amazon} os benefícios do DevOps são:
 
-De acordo com \cite{amazon} existem algumas práticas essenciais que ajudam as empresas a inovar mais rapidamente por
-meio da automação e da simplificação dos processos de desenvolvimento de software e gerenciamento de infraestrutura. A
-maioria dessas práticas já são realizadas e mencionadas em algumas metodologias como o XP. São elas: integração
-contínua, entrega contínua, microsserviços, infraestrutura como código, monitoramento e registro em log, comunicação e
-colaboração.
+\begin{itemize}
+  \item \textbf{Velocidade}: O modelo de DevOps permite que as equipes de desenvolvimento e operações operem em alta velocidade para que se possa trazer inovações para os seus clientes rapidamente, adaptando-se ao mercado.
+  \item \textbf{Entrega rápida}: Aumenta o ritmo de lançamento de novas versões com maior frequência e qualidade por meio da integração e entrega contínuas.
+  \item \textbf{Confiabilidade}: Garante a qualidade dos lançamentos para que você possa entregar com confiança em um ritmo mais rápido.
+  \item \textbf{Escala}: Utilizando infraestrutura como código ajuda a gerenciar sistemas complexos ou dinâmicos com eficiência e risco reduzido.
+  \item \textbf{Colaboração melhorada}: As equipes de desenvolvimento e operações colaboram de perto, compartilham responsabilidade e combinam seus fluxos de trabalho.
+  \item \textbf{Segurança}: Mantem o controle e preserva a conformidade.
+\end{itemize}
+
+\subsection{Fechamento da seção}
+
+O DevOps proporciona uma mudança cultural que tem como foco as práticas de automação das diversas atividades necessárias para agilizar e entregar código de qualidade em produção e estão frequentemente ligadas ao desenvolvimento ágil. Por exemplo: compilação do código, testes automatizados, empacotamento, criação de ambientes para testes e produção, configuração da infraestrutura do software, migração de dados, monitoramento, melhoria de logs e métricas, segurança, desempenho, deploy \cite{sato} citado por \cite{correa}.
