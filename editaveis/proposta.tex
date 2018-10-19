@@ -166,9 +166,9 @@ ler essa seção obterá uma visão geral de como esse software está estruturad
 
 \subsection{Representação Arquitetural}
 
-O projeto será implementado utilizando o framework Django na versão 2.0. O django utiliza-se do MVT (Model-View-Template) como uma adaptação do MVC (Model-View-Controller), nas views utilizaremos as \textit{Class Based Views} para padronização do código. Esse framework fará comunicação com o banco de dados Postgresql e o servidor nginx.
+O projeto será implementado utilizando o framework Django na versão 2.0. O django utiliza-se do MVT (Model-View-Template) como uma adaptação do MVC (Model-View-Controller), nas views utilizaremos as \textit{Class Based Views} para padronização do código. Esse framework fará comunicação com o banco de dados Postgresql e o servidor nginx.  A figura \ref{fig:arquitetura} exemplifica essa representação arquitetural.
 
-\begin{figure}[H]
+\begin{figure}[h!]
 	\centering
   \includegraphics[keepaspectratio=true,scale=0.4]{figuras/arquitetura.eps}
   \caption[Representação Arquitetural.]{Representação Arquitetural. Fonte: Autor}
@@ -194,7 +194,9 @@ O projeto será implementado utilizando o framework Django na versão 2.0. O dja
 
 \subsection{Pacotes Significativos do Ponto de Vista da Arquitetura}
 
-\begin{figure}[H]
+A figura \ref{fig:pacotes} lista todos os pacotes do ponto de vista da arquitetura do software.
+
+\begin{figure}[h!]
 	\centering
   \includegraphics[keepaspectratio=true,scale=0.5]{figuras/pacotes.eps}
   \caption[Pacotes do projeto.]{Pacotes do projeto. Fonte: Autor}
