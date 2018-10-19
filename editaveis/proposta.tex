@@ -11,7 +11,7 @@ Recapitulando, o objetivo do projeto é a automatização do metodologia ativa d
   \item \textbf{Avaliação em pares}: Avaliar o desempenho de cada membro da equipe.
 \end{enumerate}
 
-\section{Finalidade}
+\section{Finalidade do software}
 
 A finalidade do software é que a aplicação do TBL se torne algo mais fácil, constante e automatizado, tornando o processo mais prazeroso, tanto para o aluno quanto para o professor. A ideia do sistema é ter um design atrativo e será responsável por todo o processo do TBL desde a preparação até as avaliações e fechamento da disciplina.
 
@@ -86,6 +86,8 @@ A proposta do serviço ofertado, envolve a utilização de certos recursos que n
   \item \textbf{Confiabilidade}: O sistema deve se comprometer em apresentar informações confiáveis para o usuário do sistema, entretanto dependerá diretamente dos demais usuários, uma vez que o conteúdo apresentado será de autoria destes e deve apresentar um sistema de autenticação, autorização e recuperação seguro e eficiente.
 \end{itemize}
 
+Para uma melhor visualização e rastreabilidade de requisitos não funcionais, no apêndice \ref{apendice:nfr} está o framework NFR.
+
 \section{Alternativas e Concorrências}
 
 Não foi encontrada nenhum site que automatiza as tarefas do Team Based Learning, apenas artigos, livros e sites ensinando como aplicar o TBL dentro das universidades e escolas usando apenas papel e caneta e algumas ferramentas de CMCs.
@@ -97,7 +99,7 @@ Não foi encontrada nenhum site que automatiza as tarefas do Team Based Learning
 
 \section{Ferramentas e Tecnologias}
 
-Abaixo será listado todas as ferramentas e tecnologias utilizadas para a realização do projeto.
+Abaixo será listado todas as ferramentas e tecnologias que será utilizadas para a realização do projeto.
 
 \begin{itemize}
   \item \textbf{Draw.io}: Criação de diagramas.
@@ -145,13 +147,17 @@ O projeto tem como base dois principais marcos definidos na tabela \ref{tab:22},
 
 A Estrutura Analítica do Projeto ou EAP, foi utilizada como entrada do processo fornecendo os pacotes de trabalho previamente discutidos. Esses pacotes foram então decompostos de maneira a gerar suas respectivas atividades.
 
-A EAP se encontra no Apêndice \ref{apendice:eap}
+A EAP se encontra no apêndice \ref{apendice:eap}
 
 \subsection{ROADMAP}
 
 Roadmap definido na figura \ref{fig:roadmap1} e figura \ref{fig:roadmap2} é uma ferramenta muito útil para gestores de produto. Com ele é possível planejar e comunicar a visão de futuro que vc tem para o seu produto. É o cronograma da metodologia ágil.
 
-O ROADMAP se encontra no Apêndice \ref{apendice:roadmap}
+O ROADMAP se encontra no apêndice \ref{apendice:roadmap}
+
+\subsection{Canvas}
+
+Canvas é um modelo visual que possibilita as pessoas de forma resumida te uma ideia do que é o projeto (canvas de projeto) e o modelo de negócio (canvas de negócio) e está localizado no apêndice \ref{apendice:canvas}.
 
 \section{Arquitetura do Software}
 
@@ -196,7 +202,7 @@ O projeto será implementado utilizando o framework Django na versão 2.0. O dja
 \end{figure}
 
 \begin{itemize}
-  \item Os pacotes dos apps:
+  \item Os pacotes de cada aplicação:
   \begin{itemize}
     \item \textbf{locale}: Pasta que irá ter toda a tradução do software para pt-BR.
     \item \textbf{migrations}: pasta com todas as migrações das modelos para o banco, são os SQLs.
@@ -204,8 +210,7 @@ O projeto será implementado utilizando o framework Django na versão 2.0. O dja
     \item \textbf{templates}: É onde fica os templates da aplicação (HTML)
     \item \textbf{tests}: contém os testes automatizados feitos no sistema.
     \item \textbf{\_\_init\_\_}: É o arquivo que define que sua pasta é um pacote python.
-    \item \textbf{admin}: contém a instância da modelo que fará parte do sistema de administração do django, lá pode-se
-      fazer CRUD das models.
+    \item \textbf{admin}: contém a instância da modelo que fará parte do sistema de administração do django.
     \item \textbf{app}: arquivo que contém informações da aplicação do django.
     \item \textbf{forms}: pasta que contém os campos que será inserido no formularios
     \item \textbf{models}: pasta de arquivos que faz interface com o banco de dados, é responsável por leitura,
@@ -216,20 +221,20 @@ O projeto será implementado utilizando o framework Django na versão 2.0. O dja
       rotas (Classe Based Views).
     \item \textbf{fixtures}: pasta que contém arquivos json para pré-popular o banco de dados para testes manuais
   \end{itemize}
-  \item Os pacotes do projeto settings:
+  \item Os pacotes de configuração:
   \begin{itemize}
     \item \textbf{config}: É uma pasca que contém as configurações do software separada em arquivos.
     \item \textbf{settings}: São as configurações gerais do software importadas da pasta config.
     \item \textbf{urls}: Arquivo que terá o mapeamento de rotas de todo o projeto com todas as aplicações.
     \item \textbf{wsgi}: Arquivo usado para deploy do projeto.
   \end{itemize}
-  \item Os pacotes do projeto TBL:
+  \item Os pacotes do projeto Django:
   \begin{itemize}
     \item \textbf{manage}: Arquivo de configuração geral do django.
     \item \textbf{requirements}: Arquivos para instalar dependências da aplicação através do seguinte comando:
       pip3 install -r requirements.txt
   \end{itemize}
-  \item Os pacotes gerais do projeto:
+  \item Os pacotes gerais do projeto PGTBL:
   \begin{itemize}
     \item \textbf{Vagrantfile}: Arquivo que gerencia a máquina virtual de desenvolvimento, criado para desenvolvedores
       que queiram desenvolver em sistemas operacionais diferentes do Linux, como Windows ou Mac, precisa ter o
