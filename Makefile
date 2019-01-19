@@ -16,13 +16,10 @@ FIXOS_FILES = $(addprefix $(FIXOS_DIR)/, $(FIXOS_SOURCES))
 
 EDITAVEIS_DIR = editaveis
 EDITAVEIS_SOURCES = informacoes.tex dedicatoria.tex \
-					resumo.tex abstract.tex abreviaturas.tex simbolos.tex \
-					introducao.tex referencial_teorico.tex tbl.tex \
-					gerenciamento.tex vev.tex gqm.tex devops.tex gnu.tex \
-					metodologia.tex	metodologia_desenvolvimento.tex \
-					metodologia_requisitos.tex metodologia_devops.tex \
-					metodologia_gqm.tex proposta.tex conclusao.tex \
-					apendices.tex anexos.tex \
+					resumo.tex abstract.tex abreviaturas.tex caso_de_uso.tex \
+					introducao.tex tbl.tex metodologia.tex conclusao.tex \
+					resultados.tex requisitos.tex metricas.tex arquitetura.tex \
+					apendices.tex \
 
 EDITAVEIS_FILES = $(addprefix $(EDITAVEIS_DIR)/, $(EDITAVEIS_SOURCES))
 

@@ -1,0 +1,107 @@
+\section{Requisitos do Software}
+
+\subsection{Recursos do produto (Requisitos funcionais ou Épicos)}
+
+\begin{table}[h!]
+  \centering
+  \caption{Requisitos Funcionais ou Épicos do produto}
+  \label{tab:21}
+  \begin{tabular}{@{}ll@{}}
+    \toprule
+    \textbf{Recurso}                                                           & \textbf{Descrição}
+    \\ \midrule
+    \begin{tabular}[c]{@{}l@{}}Administrar Disciplinas\\ e alunos\end{tabular} & \begin{tabular}[c]{@{}l@{}}O professor
+      pode adicionar, remover, criar e editar disciplinas\\ e turmas e disponibilizar a senha de acesso a elas para os
+  alu-\\ nos entrarem, além de poder remover ou adicionar estudantes\\ na turma e gerenciar suas notas.\end{tabular}
+  \\ \midrule
+  Criar conta                                                                & \begin{tabular}[c]{@{}l@{}}O professor e
+    os alunos pode criar sua contas no sistema,\\ apenas passando seus dados pessoais como nome, email,\\ senha, e
+  usuário\end{tabular}
+  \\ \midrule
+  \begin{tabular}[c]{@{}l@{}}Gerenciar dados\\ pessoais\end{tabular}         & \begin{tabular}[c]{@{}l@{}}O usuário
+poderá editar sua senha e dados pessoais do\\ usuário conforme necessário.\end{tabular}
+\\ \midrule
+\begin{tabular}[c]{@{}l@{}}Funcionalidades do\\ TBL\end{tabular}           & \begin{tabular}[c]{@{}l@{}}Funcionalidades
+  relacionadas às fases de preparação, garantia\\ de preparo ou RAT, iRAT, gRAT e apelações, Aplicação de\\ conceitos e
+  avaliação em pares\end{tabular}                                                                                   \\
+  \midrule
+  Relatório                                                                  & \begin{tabular}[c]{@{}l@{}}O professor
+    terá um dashboard com relatórios do desempenho\\ dos alunos em cada questão da avaliação, tendo um feedback\\ para o
+  que ele deve focar mais nas aulas.\end{tabular}
+  \\ \midrule
+  Gamificação                                                         & \begin{tabular}[c]{@{}l@{}}Terá também um
+    rank de grupos, na qual o primeiro colocado\\ ficará exposto no Hall da Fama que será visto por novos alunos\\ dos
+    próximos semestres, não há rank individual porque o obje-\\ tivo não é a competição e sim a
+  colaboração.\end{tabular} \\ \bottomrule
+  \end{tabular}
+\end{table}
+
+No apendice \ref{apendice:fotos} será exemplificado cada requisito funcional dentro do software, porém não irá mostrar
+todas as funcionalidades do mesmo.
+
+\subsection{Requisitos de qualidade (Não funcionais ou Enables)}
+
+Além do requisitos funcionais, foram identificados como importantes os seguintes requisitos de qualidade:
+
+\begin{itemize}
+  \item \textbf{Sistema}: O sistema deve seguir a arquitetura MVT definida no documento de arquitetura e as ferramentas de desenvolvimento será o Python (versão 3.5) e o framework Django (versão 2.0) tendo atualização constante.
+  \item \textbf{Suportabilidade}: O sistema poderá ser acessado em computadores pessoais - notebook, desktop – utilizando-se de um serviço de internet. Sendo uma aplicação Web compatível com os principais sistemas operacionais (Linux, Mac, Windows), acessada através do navegador Google Chrome e/ou Firefox de um dispositivo móvel ou fixo.
+  \item \textbf{Qualidade}: O sistema deve seguir uma folha de estilo a ponto de o código ser legível e de fácil manutenção, tendo como base boas práticas de programação, o sistema deve ter baixo acoplamento e alta coesão além de ser modularizado focando na flexibilidade e manutenção do mesmo.
+  \item \textbf{Usabilidade}: O sistema deve ser responsivo, adaptando-se à plataforma que o usuário estiver utilizando e o design deve ser fácil de usar e aprender.
+  \item \textbf{Desempenho}: Por ser um sistema web o software necessita de uma conexão estável com a internet para seu funcionamento. A velocidade da internet tem impacto direto no desempenho da aplicação, sendo necessário uma velocidade suficiente para processar as informações e executar as funcionalidades do sistema.
+  \item \textbf{Confiabilidade}: O sistema deve apresentar uma boa percentagem de cobertura de testes automatizados,
+    mínimo de 70\% e bastante encapsulamento de código, além de um sistema de log eficiente e ter segurança.
+  \item \textbf{Segurança}: O sistema deve se comprometer em apresentar informações confiáveis para o usuário do sistema, entretanto dependerá diretamente dos demais usuários, uma vez que o conteúdo apresentado será de autoria destes e deve apresentar um sistema de autenticação, autorização e recuperação seguro e eficiente.
+\end{itemize}
+
+\subsection{Ferramentas e Tecnologias}
+
+Abaixo será listado todas as ferramentas e tecnologias que foram utilizadas para a realização do projeto.
+
+\begin{itemize}
+  \item \textbf{Draw.io}: Criação de diagramas.
+  \item \textbf{Google Drive}: Armazenamento e edição colaborativa dos artefatos e documentos do projeto.
+  \item \textbf{Git e Github}: Controle de versão do código para um bom gerenciamento do mesmo.
+  \item \textbf{Zenhub}: Permitir o gerenciamento constante das tarefas que serão realizadas durante o projeto.
+  \item \textbf{Linux ubuntu}: Ambiente de desenvolvimento, homologação, produção e teste.
+  \item \textbf{Whatsapp e Email}: Permite a comunicação entre os membros da equipe e os stakeholders, além da
+    comunicação presencial.
+  \item \textbf{Travis CI}: Ferramenta responsável por realizar a integração contínua das funcionalidades realizadas
+  \item \textbf{Codacy}: Ferramenta para cobertura de testes e análise estática de código, usado para coletar métricas e
+    melhorar a qualidade do código.
+  \item \textbf{Docker}: Ferramentas responsáveis por criar um ambientes de desenvolvimento, teste, homologação e produção
+  \item \textbf{DockerHub}: Repositório para armazenar as imagens de cada ambiente.
+  \item \textbf{Python 3.5}: Linguagem de programação para a criação do software.
+  \item \textbf{Django 2.0}: Framework utilizado para a criação do software.
+  \item \textbf{Makefile}: Usado para facilitar a execução de scripts.
+  \item \textbf{mkdocs}: Usado para criar a documentação do software.
+\end{itemize}
+
+\subsection{EAP - Estrutura Analítica do Produto}
+
+A Estrutura Analítica do Produto, foi utilizada como entrada do processo fornecendo os pacotes de trabalho previamente discutidos. Esses pacotes foram então decompostos de maneira a gerar suas respectivas atividades.
+
+A EAP se encontra no apêndice \ref{apendice:eap}
+
+\subsection{Marcos do projeto}
+
+O projeto tem como base dois principais marcos definidos na tabela \ref{tab:22}, que representam entregas do produto, são eles: \textit{Release 01} e \textit{Release 02}.
+
+\begin{table}[h!]
+  \centering
+  \caption{Marcos do projeto}
+  \label{tab:22}
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    \textbf{Marco}             & \textbf{Data} & \textbf{Atividade}
+    \\ \midrule
+    \textbf{Início do projeto} & 03/10/2017    & Começo do projeto
+    \\ \midrule
+    \textbf{Release 01}        & 01/08/2018    & \begin{tabular}[c]{@{}l@{}}Entrega da primeira versão funcional do
+    sistema\\ com algumas funcionalidades implementadas e\\ testadas, além de sua documentação\end{tabular}           \\
+    \midrule
+    \textbf{Release 02}        & 01/03/2019    & \begin{tabular}[c]{@{}l@{}}Entrega do versão final do projeto com as
+    funcio-\\ nalidades restantes do escopo previamente definido\\ com a utilização da abordagem ágil.\end{tabular} \\
+    \bottomrule
+  \end{tabular}
+\end{table}
