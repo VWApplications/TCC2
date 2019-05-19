@@ -19,7 +19,7 @@ medidas subjetivas terão maior consideração na avaliação do mesmo. As medid
 itens do questionário do tipo "\textit{like}" que avaliam atitudes do usuário em relação a atributos como facilidade de uso do
 sistema e a similaridade de interfaces em determinados cenários. A maioria dos cenários de avaliação de usabilidade são
 conjuntos de tarefas nas quais os usuários resolvem problemas, por exemplo, como resolver a lista de exercício, se
-preparando para as avaliações, automatizar o cálculo das notas entre outras \cite{questionario}.
+preparando para as avaliações, automatizar o cálculo das notas entre outras em relação aos requisitos não funcionais \cite{questionario}.
 
 Para adquirir essas métricas será utilizado um questionário da IBM especificamente para uso no contexto de testes de
 usabilidade baseados em cenários e medidas subjetivas. Foi analisado alguns tipos de questionários como o
@@ -50,19 +50,20 @@ para o professor responder após a conclusão do TBL.
 
 \section{Questionário ASQ}
 
-O questionário Pós-cenário (ASQ) é um questionário de três itens que os avaliadores de usabilidade da IBM utilizam para
-avaliar a satisfação do participante após a conclusão de cada cenário proposto. Os itens abordam três importantes
-componentes da satisfação do usuário com a facilidade de uso do sistema: facilidade de conclusão da tarefa, tempo para
-concluir uma tarefa e adequação das informações de suporte (ajuda on-line, mensagens e documentação)
-\cite{questionario}.
+O questionário Pós-cenário (ASQ) é um questionário de três ou mais itens que os avaliadores de usabilidade da IBM utilizam para
+avaliar a satisfação do participante após a conclusão de cada cenário proposto \cite{questionario}. Os itens do
+questionário abordam afirmações relacionadas a 4 dos 5 requisitos não funcionais aplicados a ferramenta para avaliar se
+os requisitos foram satisfeitos. Os requisitos são: suportabilidade, desempenho, usabilidade e segurança ou
+confiabilidade. O quinto requisito não funcional, o requisito de qualidade, é respondido pelas métricas
+coletadas na ferramenta codacy.
 
-O questionário é constituido de itens com escalas gráficas de 7 pontos, na qual temos 1 para o caso do usuário concordar
-totalmente e 7 caso discordar totalmente e um ponto não aplicavel (N/A) fora da escala para o caso de o usuário não
-querer responder. O resultado será a média aritmetica dos escores dos três itens para obter a pontuação do ASQ para a
-satisfação de um participante com o sistema para um determinado cenário. Quanto mais baixo o resultado melhor. Se um
+O questionário será constituido de itens com escalas gráficas de 7 pontos, na qual temos 7 para o caso do usuário concordar
+totalmente e 1 caso discordar totalmente e um ponto não aplicavel (N/A) fora da escala para o caso de o usuário não
+querer responder. O resultado será a média aritmética dos escores dos quatro itens para obter a pontuação do ASQ para a
+satisfação de um participante com o sistema para um determinado cenário. Quanto mais alto o resultado melhor. Se um
 participante não responder a um item ou marcar N/A, o cálculo da média será a média dos itens respondidos.
 
-$$P_{i} = \frac{x_{1} + x_{2} + x_{3}}{3}$$
+$$P_{i} = \frac{x_{1} + x_{2} + x_{3} + x_{4}}{4}$$
 
 $$R_{final} = \sum_{i=1}^{n} \frac{P_{i}}{n}$$
 
@@ -75,17 +76,22 @@ Em relação ao software PGTBL para cada uma das afirmações abaixo, preencha a
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[keepaspectratio=true,scale=0.6]{figuras/p1.eps}
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/p1.eps}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[keepaspectratio=true,scale=0.6]{figuras/p2.eps}
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/p2.eps}
 \end{figure}
 
 \begin{figure}[h!]
   \centering
-  \includegraphics[keepaspectratio=true,scale=0.6]{figuras/p3.eps}
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/p3.eps}
+\end{figure}
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[keepaspectratio=true,scale=0.5]{figuras/p4.eps}
 \end{figure}
 
 \section{Resultado}
